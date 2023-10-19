@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MDA_CaracMoto.Pages.ModifPage"
+             Title="ModifPage">
+    <VerticalStackLayout>
+
+        <Entry
+            x:Name="ModifMarque"
+            Placeholder="Marque"
+            TextTransform="Uppercase"
+            Text="{Binding Marque}"/>
+        <Entry
+            x:Name="ModifModele"
+            TextTransform="Uppercase"
+            Placeholder="Modèle"
+            Text="{Binding Modele}"/>
+        <Entry
+            x:Name="ModifAnnee"
+            Placeholder="Année"
+            Text="{Binding Annee}"/>
+        <Entry 
+            x:Name="ModifRef"
+            TextTransform="Uppercase"
+            Placeholder="Référence"
+            Text="{Binding Reference}"/>
+        <Entry
+            x:Name="ModifCV"
+            Placeholder="CV"
+            Text="{Binding CV}"/>
+        <Entry
+            x:Name="ModifKW"
+            Placeholder="KW"
+            Text="{Binding KW}"/>
+        <Entry
+            x:Name="ModifPoids"
+            Placeholder="Poids"
+            Text="{Binding Poids}"/>
+        <Entry
+            x:Name="ModifPrix"
+            Placeholder="Prix"
+            Text="{Binding Prix}"/>
+        <Button
+            x:Name="ModifButton"
+            Text="Modifier"
+            Clicked="ModifButton_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>

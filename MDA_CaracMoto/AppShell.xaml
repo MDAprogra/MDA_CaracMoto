@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MDA_CaracMoto.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Home="clr-namespace:MDA_CaracMoto"
+    xmlns:Pages="clr-namespace:MDA_CaracMoto.Pages"
+    Shell.FlyoutBehavior="Flyout">
+
+    <ShellContent
+        Title="Accueil"
+        ContentTemplate="{DataTemplate Home:MainPage}"
+        Route="MainPage" />
+    <ShellContent
+        Title="Ajouter une moto"
+        ContentTemplate="{DataTemplate Pages:AjouterMoto}"
+        Route="AjouterMoto" />
+    <ShellContent
+        Title="Liste des motos"
+        ContentTemplate="{DataTemplate Pages:AffichageMoto}"
+        Route="ListeMoto" />
+</Shell>

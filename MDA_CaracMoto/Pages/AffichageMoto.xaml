@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MDA_CaracMoto.Pages.AffichageMoto"
+             Title="Affichage Moto">
+    <VerticalStackLayout>
+        <ListView x:Name="ListMoto" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="60"/>
+                                <RowDefinition Height="60"/>
+                                <RowDefinition Height="60"/>
+                                <RowDefinition Height="50"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition Width="125"/>
+                                <ColumnDefinition Width="125"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding Ref}"
+                                   Grid.Column="0"
+                                   Grid.Row="0"
+                                   Grid.ColumnSpan="2"
+                                   FontAttributes="Bold"
+                                   HorizontalOptions="Start"
+                                   VerticalOptions="Start"
+                                   TextColor="White"
+                                   FontSize="30"/>
+                            <Label Text="{Binding Marque}"
+                                   Grid.Column="0"
+                                   Grid.Row="1"
+                                   FontAttributes="Italic"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   TextColor="White"
+                                   FontSize="20"/>
+                            <Label Text="{Binding Modele}"
+                                   Grid.Column="0"
+                                   Grid.Row="2"
+                                   FontAttributes="Italic"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   TextColor="White"
+                                   FontSize="20"/>
+                            <Label Text="{Binding Annee}"
+                                      Grid.Column="1"
+                                      Grid.Row="1"
+                                      HorizontalOptions="Center"
+                                      VerticalOptions="Center"
+                                      TextColor="White"
+                                   FontSize="20"
+                                   FontAttributes="Italic"/>
+                            <Label Text="{Binding CV}"
+                                      Grid.Column="1"
+                                      Grid.Row="2"
+                                      HorizontalOptions="Center"
+                                      VerticalOptions="Center"
+                                      TextColor="White"
+                                   FontSize="20"
+                                   FontAttributes="Italic"/>
+                            <Label Text="{Binding KW}"
+                                      Grid.Column="1"
+                                      Grid.Row="3"
+                                      HorizontalOptions="Center"
+                                      VerticalOptions="Center"
+                                      TextColor="White"
+                                   FontSize="20"
+                                   FontAttributes="Italic"/>
+                            <Label Text="{Binding Poids}"
+                                      Grid.Column="2"
+                                      Grid.Row="1"
+                                      HorizontalOptions="Center"
+                                      VerticalOptions="Center"
+                                      TextColor="White"
+                                   FontSize="20"
+                                   FontAttributes="Italic"/>
+                            <Label Text="{Binding Prix  }"
+                                      Grid.Column="2"
+                                      Grid.Row="2"
+                                      HorizontalOptions="Center"
+                                      VerticalOptions="Center"
+                                      TextColor="White"
+                                   FontSize="20"
+                                   FontAttributes="Italic"/>
+                            <!--<Button x:Name="DeleteBTN"
+                                    Text="Supprimer" CommandParameter="{Binding ID}"
+                                    Clicked="DeleteBTN_Clicked"
+                                    Grid.Column="2"
+                                    Grid.Row="3"
+                                    HorizontalOptions="End"
+                                    WidthRequest="100"
+                                    HeightRequest="20"/>-->
+                            <ImageButton x:Name="DeleteBTN"
+                                         Source="logo_suppr.png"
+                                    CommandParameter="{Binding ID}"
+                                    Clicked="DeleteBTN_Clicked"
+                                    Grid.Column="2"
+                                    Grid.Row="3"
+                                    HorizontalOptions="End"
+                                    WidthRequest="100"
+                                    HeightRequest="20"/>
+
+
+                            <!--<Button x:Name="ModifBTN"
+                                    Text="Modifier" CommandParameter="{Binding ID}"
+                                    Clicked="ModifBTN_Clicked"
+                                    Grid.Column="0"
+                                    Grid.Row="3"
+                                    HorizontalOptions="Start"
+                                    WidthRequest="100"
+                                    HeightRequest="20"/>-->
+                            <ImageButton
+                                x:Name="ModifBTN"
+                                Source="logo_modif.png"
+                                CommandParameter="{Binding ID}"
+                                    Clicked="ModifBTN_Clicked"
+                                    Grid.Column="0"
+                                    Grid.Row="3"
+                                    HorizontalOptions="Start"
+                                    WidthRequest="100"
+                                    HeightRequest="20"/>
+
+
+                            <Label
+                                Text="Marque :"
+                                Grid.Column="0"
+                                Grid.Row="1"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Start"/>
+                            <Label
+                                Text="Modele :"
+                                Grid.Column="0"
+                                Grid.Row="2"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Start"/>
+                            <Label
+                                Text="Annee :"
+                                Grid.Column="1"
+                                Grid.Row="1"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Start"/>
+                            <Label
+                                Text="CV :"
+                                Grid.Column="1"
+                                Grid.Row="2"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Start"/>
+                            <Label
+                                Text="KW :"
+                                Grid.Column="1"
+                                Grid.Row="3"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Start"/>
+                            <Label
+                                Text="Poids :"
+                                Grid.Column="2"
+                                Grid.Row="1"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Start"/>
+                            <Label
+                                Text="Prix :"
+                                Grid.Column="2"
+                                Grid.Row="2"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Start"/>
+                        </Grid>
+                        
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </VerticalStackLayout>
+</ContentPage>
