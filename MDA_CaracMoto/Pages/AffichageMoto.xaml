@@ -173,9 +173,22 @@
                                     Clicked="Btn_Sound_Clicked"
                                     WidthRequest="100"
                                     HeightRequest="20"
-                                    Grid.Row="1"
+                                    Grid.Row="2"
                                     Grid.Column="4"
                                     HorizontalOptions="Start"/>
+                            <Label
+                                Text="SON"
+                                Grid.Column="4"
+                                Grid.Row="1"
+                                BackgroundColor="#081c37"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                HorizontalTextAlignment="Center"
+                                VerticalTextAlignment="Center"
+                                FontAttributes="Bold"
+                                FontSize="25"
+                                HeightRequest="35"
+                                WidthRequest="100"/>
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
