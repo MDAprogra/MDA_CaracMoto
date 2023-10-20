@@ -16,6 +16,7 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -100,7 +101,7 @@
             x:Name="Btn_Valid"
             Text="Ajouter"
                 Margin="15"
-            Grid.Row="9"
+            Grid.Row="10"
             Grid.Column="1"
             HeightRequest="30"
             WidthRequest="400"
@@ -128,9 +129,15 @@
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>
-
-
-
+            <Entry
+                x:Name="Audio"
+                Grid.Row="9"
+                Grid.Column="1"
+                HeightRequest="30"
+                WidthRequest="500"
+                HorizontalOptions="Center"
+                Placeholder="Nom de l'audio"/>
+            
             <Image x:Name="Fabio"
                    Margin="10"
                      Grid.Row="0"

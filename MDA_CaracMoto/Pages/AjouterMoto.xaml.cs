@@ -36,7 +36,8 @@ public partial class AjouterMoto : ContentPage
             CV = Convert.ToInt32(CV.Text),
             KW = Convert.ToInt32(KW.Text),
             Poids = Convert.ToInt32(Poids.Text),
-            Img = Image.Text + Extension
+            Img = Image.Text + Extension,
+            Audio = Audio.Text
         };
         _dataService.AddMoto(moto);
         await DisplayAlert("Ajout", "Moto ajoutée", "OK");
@@ -51,5 +52,6 @@ public partial class AjouterMoto : ContentPage
         Poids.Text = "";
         ChoixExt.SelectedItem = null;
         Image.Text = "";
+        Audio.Text = "";
     }
 }
