@@ -40,6 +40,10 @@
             x:Name="ModifPrix"
             Placeholder="Prix"
             Text="{Binding Prix}"/>
+        <Entry
+            x:Name="ModifAudio"
+            Placeholder="Audio"
+            Text="{Binding Audio}"/>
         <Button
             x:Name="ModifButton"
             Text="Modifier"

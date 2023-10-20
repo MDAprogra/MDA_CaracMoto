@@ -91,7 +91,7 @@ namespace MDA_CaracMoto.Facto
         }
         public CaracMoto GetMotoID(int id)
         {
-            string sql = $"select ID,Ref,Marque,Modele,Annee,Prix,CV,KW,Poids from Caracteristique where ID = '{id}'";
+            string sql = $"select ID,Ref,Marque,Modele,Annee,Prix,CV,KW,Poids,CheminAudio from Caracteristique where ID = '{id}'";
             CaracMoto values;
             _connexion.Open();
             using (SqlCommand command = new SqlCommand(sql, _connexion))

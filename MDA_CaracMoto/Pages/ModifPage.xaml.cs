@@ -29,6 +29,7 @@ public partial class ModifPage : ContentPage
         ModifPoids.Text = moto.Poids.ToString();
         ModifPrix.Text = moto.Prix.ToString();
         ModifRef.Text = moto.Ref;
+        ModifAudio.Text = moto.Audio;
     }
     public void ModifButton_Clicked(object sender, EventArgs e)
     {
@@ -42,7 +43,8 @@ public partial class ModifPage : ContentPage
             Prix = Convert.ToInt32(ModifPrix.Text),
             CV = Convert.ToInt32(ModifCV.Text),
             KW = Convert.ToInt32(ModifKW.Text),
-            Poids = Convert.ToInt32(ModifPoids.Text)
+            Poids = Convert.ToInt32(ModifPoids.Text),
+            Audio = ModifAudio.Text
         };
         if (moto.Ref.Trim() == "" || moto.Marque.Trim() == "" || moto.Modele.Trim() == "")
         {
