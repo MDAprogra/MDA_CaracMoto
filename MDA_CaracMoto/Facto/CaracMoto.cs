@@ -18,5 +18,6 @@ namespace MDA_CaracMoto.Facto
         public int? KW { get; set; }
         public int? Poids { get; set; }
         public string Img { get; set; }
+        public string Audio { get; set; }
     }
 }

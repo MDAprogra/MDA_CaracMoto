@@ -166,8 +166,12 @@
                                 Grid.Row="2"
                                 FontAttributes="Bold"
                                 HorizontalOptions="Start"/>
+                            <Button x:Name="Btn_Sound"
+                                    Text="Sound"
+                                    Clicked="Btn_Sound_Clicked"
+                                    WidthRequest="100"
+                                    HeightRequest="20"/>
                         </Grid>
-                        
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

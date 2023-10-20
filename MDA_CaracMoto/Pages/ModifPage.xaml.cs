@@ -1,5 +1,6 @@
 using MDA_CaracMoto.Facto;
 using Microsoft.Identity.Client;
+using Plugin.Maui.Audio;
 using System.Collections.ObjectModel;
 
 namespace MDA_CaracMoto.Pages;
@@ -7,10 +8,12 @@ namespace MDA_CaracMoto.Pages;
 public partial class ModifPage : ContentPage
 {
     public readonly IDataService _dataService;
+    public readonly IAudioManager audioManager;
     public int idMoto { get; set;}
     public ModifPage(int id)
     {
         InitializeComponent();
+        this.audioManager = audioManager;
         idMoto = id;
         _dataService = Application.Current.MainPage
                 .Handler
@@ -47,6 +50,6 @@ public partial class ModifPage : ContentPage
             return;
         }
         _dataService.ModifMoto(moto, idMoto);
-        Navigation.PushAsync(new AffichageMoto());
+        Navigation.PushAsync(new AffichageMoto(audioManager));
     }
 }

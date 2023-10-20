@@ -58,7 +58,7 @@ namespace MDA_CaracMoto.Facto
         }
         public void AddMoto(CaracMoto moto)
         {
-            string sql = $"insert into Caracteristique(Ref, Marque, Modele, Annee, Prix, CV, KW, Poids, CheminImg) values('{moto.Ref}', '{moto.Marque}', '{moto.Modele}','{moto.Annee}', '{moto.Prix}', '{moto.CV}', '{moto.KW}', '{moto.Poids}','{moto.Img}')";
+            string sql = $"insert into Caracteristique(Ref, Marque, Modele, Annee, Prix, CV, KW, Poids, CheminImg, CheminAudio) values('{moto.Ref}', '{moto.Marque}', '{moto.Modele}','{moto.Annee}', '{moto.Prix}', '{moto.CV}', '{moto.KW}', '{moto.Poids}','{moto.Img}','{moto.Audio}')";
             _connexion.Open();
             using (SqlCommand cmd = new SqlCommand(sql, _connexion))
             {

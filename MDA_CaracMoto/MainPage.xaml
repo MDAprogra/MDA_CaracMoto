@@ -24,7 +24,6 @@
                         NumberOfTapsRequired="1" />
                 </Image.GestureRecognizers>
             </Image>
-
             <Label
                 x:Name="Lb_Slt"
                 Text="Salut amis motard !"
