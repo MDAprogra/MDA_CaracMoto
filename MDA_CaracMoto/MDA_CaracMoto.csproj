@@ -50,6 +50,8 @@
 	<ItemGroup>
 	  <None Remove="Resources\AppIcon\icon_bike.png" />
 	  <None Remove="Resources\Images\logo_modif.png" />
+	  <None Remove="Resources\Images\logo_pause.png" />
+	  <None Remove="Resources\Images\logo_play.png" />
 	  <None Remove="Resources\Images\logo_suppr.png" />
 	  <None Remove="Resources\Images\moto_course.png" />
 	  <None Remove="Resources\Image_Fun\img_fille1.jpg" />
