@@ -37,7 +37,7 @@ public partial class AffichageMoto : ContentPage
         var item = (int)(sender as ImageButton).CommandParameter;
         Navigation.PushAsync(new ModifPage(item));
     }
-    public async void Btn_Sound_Clicked(object sender, EventArgs e)
+    public async void Btn_Play_Clicked(object sender, EventArgs e)
     {
         //var NomAudio = (string)(sender as ImageButton).CommandParameter;
         //var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync(NomAudio));

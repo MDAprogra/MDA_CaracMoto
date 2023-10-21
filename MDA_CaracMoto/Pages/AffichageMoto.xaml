@@ -168,9 +168,18 @@
                                 Grid.Row="2"
                                 FontAttributes="Bold"
                                 HorizontalOptions="Start"/>
-                            <Button x:Name="Btn_Sound"
+                            <!--<Button x:Name="Btn_Sound"
                                     Text="Sound"
                                     Clicked="Btn_Sound_Clicked"
+                                    WidthRequest="100"
+                                    HeightRequest="20"
+                                    Grid.Row="2"
+                                    Grid.Column="4"
+                                    HorizontalOptions="Start"/>-->
+                            <ImageButton
+                                x:Name="Btn_Sound"
+                                Source="logo_play.png"
+                                    Clicked="Btn_Play_Clicked"
                                     WidthRequest="100"
                                     HeightRequest="20"
                                     Grid.Row="2"
