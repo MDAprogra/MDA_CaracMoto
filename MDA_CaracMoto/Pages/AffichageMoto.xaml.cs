@@ -9,6 +9,7 @@ public partial class AffichageMoto : ContentPage
 	public readonly IDataService _dataService;
     private readonly IAudioManager audioManager;
 
+
     public AffichageMoto(IAudioManager audioManager)
 	{
 		InitializeComponent();
@@ -41,16 +42,21 @@ public partial class AffichageMoto : ContentPage
     {
         //var NomAudio = (string)(sender as ImageButton).CommandParameter;
         //var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync(NomAudio));
+        var NomAudio = (string)(sender as ImageButton).CommandParameter;
+
+        //var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("sound_sv650.mp3"));
         try
         {
-            var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("sound_sv650.mp3"));
+            //var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("sound_sv650.mp3"));
+
+            //var NomAudio = (string)(sender as ImageButton).CommandParameter;
+            var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync(NomAudio));
             player.Play();
+
         }
         catch (Exception)
         {
             await DisplayAlert("Erreur", "Audio Introuvable. Veuillez vérifier le nom de l'audio.", "OK");
         }
-        //var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("sound_sv650.mp3"));
-        //player.Play();
-    }
+    }    
 }

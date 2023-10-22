@@ -177,9 +177,10 @@
                                     Grid.Column="4"
                                     HorizontalOptions="Start"/>-->
                             <ImageButton
-                                x:Name="Btn_Sound"
+                                x:Name="Btn_Play"
                                 Source="logo_play.png"
                                     Clicked="Btn_Play_Clicked"
+                               CommandParameter="{Binding Audio}"
                                     WidthRequest="100"
                                     HeightRequest="20"
                                     Grid.Row="2"

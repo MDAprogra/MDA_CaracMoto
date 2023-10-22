@@ -32,7 +32,7 @@ namespace MDA_CaracMoto.Facto
         }
         public List<CaracMoto> GetMoto()
         {
-            string sql = "select ID,Ref,Marque,Modele,Annee,Prix,CV,KW,Poids from Caracteristique";
+            string sql = "select ID,Ref,Marque,Modele,Annee,Prix,CV,KW,Poids,CheminAudio from Caracteristique";
             List<CaracMoto> values;
             _connexion.Open();
             using (SqlCommand command = new SqlCommand(sql, _connexion))
@@ -49,7 +49,8 @@ namespace MDA_CaracMoto.Facto
                         Prix = r["Prix"] as int?,
                         CV = r["CV"] as int?,
                         KW = r["KW"] as int?,
-                        Poids = r["Poids"] as int?
+                        Poids = r["Poids"] as int?,
+                        Audio = r["CheminAudio"] as string
                     }).ToList();
                 }
             }
@@ -80,7 +81,7 @@ namespace MDA_CaracMoto.Facto
         }
         public void ModifMoto(CaracMoto moto, int id)
         {
-            string sql = $"update Caracteristique set Ref = '{moto.Ref}', Marque = '{moto.Marque}', Modele = '{moto.Modele}', Annee = '{moto.Annee}', Prix = '{moto.Prix}', CV = '{moto.CV}', KW = '{moto.KW}', Poids = '{moto.Poids}' where ID = '{id}'";
+            string sql = $"update Caracteristique set Ref = '{moto.Ref}', Marque = '{moto.Marque}', Modele = '{moto.Modele}', Annee = '{moto.Annee}', Prix = '{moto.Prix}', CV = '{moto.CV}', KW = '{moto.KW}', Poids = '{moto.Poids}', CheminAudio='{moto.Audio}' where ID = '{id}'";
             _connexion.Open();
             using (SqlCommand cmd = new SqlCommand(sql, _connexion))
             {
