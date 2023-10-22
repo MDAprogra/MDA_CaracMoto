@@ -3,27 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MDA_CaracMoto.Pages.AjouterMoto"
              Title="Ajouter Moto">
-    <VerticalStackLayout>
-        <Grid Padding="5">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/> 
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Entry
+    <ScrollView>
+        <VerticalStackLayout>
+            <Grid Padding="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Entry
             x:Name="Marque"
             Grid.Row="0"
             Grid.Column="1"
@@ -33,7 +34,7 @@
             HorizontalOptions="Center"
             TextTransform="Uppercase"
             Placeholder="Marque"/>
-            <Entry
+                <Entry
             x:Name="Modele"
             Grid.Row="1"
             Grid.Column="1"
@@ -43,7 +44,7 @@
             HorizontalOptions="Center"
             TextTransform="Uppercase"
             Placeholder="Modele"/>
-            <Entry
+                <Entry
             x:Name="Annee"
             Grid.Row="2"
             Grid.Column="1"
@@ -52,7 +53,7 @@
             WidthRequest="500"
                 HorizontalOptions="Center"
             Placeholder="Annee"/>
-            <Entry
+                <Entry
             x:Name="Reference"
             Grid.Row="3"
             Grid.Column="1"
@@ -62,7 +63,7 @@
             TextTransform="Uppercase"
                 HorizontalOptions="Center"
             Placeholder="Reference"/>
-            <Entry
+                <Entry
             x:Name="CV"
             Grid.Row="4"
             Grid.Column="1"
@@ -71,7 +72,7 @@
             WidthRequest="500"
                 HorizontalOptions="Center"
             Placeholder="CV"/>
-            <Entry
+                <Entry
             x:Name="KW"
             Grid.Row="5"
             Grid.Column="1"
@@ -80,7 +81,7 @@
             WidthRequest="500"
                 HorizontalOptions="Center"
             Placeholder="KW"/>
-            <Entry
+                <Entry
             x:Name="Poids"
             Grid.Row="6"
             Grid.Column="1"
@@ -89,7 +90,7 @@
             WidthRequest="500"
                 HorizontalOptions="Center"
             Placeholder="Poids (Kg)"/>
-            <Entry
+                <Entry
             x:Name="Prix"
             Grid.Row="7"
             Grid.Column="1"
@@ -97,7 +98,7 @@
             WidthRequest="500"
                 HorizontalOptions="Center"
             Placeholder="Prix (€)"/>
-            <Button
+                <Button
             x:Name="Btn_Valid"
             Text="Ajouter"
                 Margin="15"
@@ -107,7 +108,7 @@
             WidthRequest="400"
                 HorizontalOptions="Center"
             Clicked="Btn_Valider"/>
-            <Entry
+                <Entry
                 x:Name="Image"
                 Grid.Row="8"
                 Grid.Column="1"
@@ -115,21 +116,21 @@
                 WidthRequest="500"
                 HorizontalOptions="Center"
                 Placeholder="Nom de l'image"/>
-            <Picker x:Name="ChoixExt"
+                <Picker x:Name="ChoixExt"
                     Grid.Row="8"
                     Grid.Column="1"
                     WidthRequest="75"
                     Margin="4"
                     HorizontalOptions="End">
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>.jpg</x:String>
-                        <x:String>.png</x:String>
-                        <x:String>.svg</x:String>
-                    </x:Array>
-                </Picker.ItemsSource>
-            </Picker>
-            <Entry
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>.jpg</x:String>
+                            <x:String>.png</x:String>
+                            <x:String>.svg</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Entry
                 x:Name="Audio"
                 Grid.Row="9"
                 Grid.Column="1"
@@ -137,27 +138,24 @@
                 WidthRequest="500"
                 HorizontalOptions="Center"
                 Placeholder="Nom de l'audio (avec l'extension)"/>
-            <Button
-                x:Name="AjoutAudio"
-                Text="Choisir un audio"
-                Clicked="AjoutAudio_Clicked"/>
-            <Image x:Name="Fabio"
+                <Image x:Name="Fabio"
                    Margin="10"
                      Grid.Row="0"
                      Grid.Column="0"
                      Grid.RowSpan="9"
                      Source="img_fabio.jpg"/>
-            <Image
+                <Image
                 x:Name="RS660"
                    Margin="10"
                      Grid.Row="0"
                      Grid.Column="2"
                      Grid.RowSpan="9"
                      Source="img_rs660.jpg"/>
-        </Grid>
-        <Image
+            </Grid>
+            <Image
             x:Name="Baniere"
             Margin="10"
             Source="img_baniere_moto.jpg"/>
-    </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

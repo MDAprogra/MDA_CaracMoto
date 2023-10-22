@@ -1,4 +1,6 @@
-﻿using MDA_CaracMoto.Facto;
+﻿using CommunityToolkit.Maui;
+using CommunityToolkit.Maui.Storage;
+using MDA_CaracMoto.Facto;
 using MDA_CaracMoto.Pages;
 using Microsoft.Extensions.Logging;
 using Plugin.Maui.Audio;
@@ -12,12 +14,13 @@ namespace MDA_CaracMoto
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseMauiCommunityToolkit()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
-
+            builder.Services.AddTransient<AjouterMoto>();
 #if DEBUG
 		builder.Logging.AddDebug();
 #endif

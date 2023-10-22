@@ -3,50 +3,52 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MDA_CaracMoto.Pages.ModifPage"
              Title="ModifPage">
-    <VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout>
 
-        <Entry
+            <Entry
             x:Name="ModifMarque"
             Placeholder="Marque"
             TextTransform="Uppercase"
             Text="{Binding Marque}"/>
-        <Entry
+            <Entry
             x:Name="ModifModele"
             TextTransform="Uppercase"
             Placeholder="Modèle"
             Text="{Binding Modele}"/>
-        <Entry
+            <Entry
             x:Name="ModifAnnee"
             Placeholder="Année"
             Text="{Binding Annee}"/>
-        <Entry 
+            <Entry 
             x:Name="ModifRef"
             TextTransform="Uppercase"
             Placeholder="Référence"
             Text="{Binding Reference}"/>
-        <Entry
+            <Entry
             x:Name="ModifCV"
             Placeholder="CV"
             Text="{Binding CV}"/>
-        <Entry
+            <Entry
             x:Name="ModifKW"
             Placeholder="KW"
             Text="{Binding KW}"/>
-        <Entry
+            <Entry
             x:Name="ModifPoids"
             Placeholder="Poids"
             Text="{Binding Poids}"/>
-        <Entry
+            <Entry
             x:Name="ModifPrix"
             Placeholder="Prix"
             Text="{Binding Prix}"/>
-        <Entry
+            <Entry
             x:Name="ModifAudio"
             Placeholder="Audio"
             Text="{Binding Audio}"/>
-        <Button
+            <Button
             x:Name="ModifButton"
             Text="Modifier"
             Clicked="ModifButton_Clicked"/>
-    </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

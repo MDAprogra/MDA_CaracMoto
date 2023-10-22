@@ -3,26 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MDA_CaracMoto.Pages.AffichageMoto"
              Title="Affichage Moto">
-    <VerticalStackLayout>
-        <ListView x:Name="ListMoto" >
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Grid Padding="10">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="60"/>
-                                <RowDefinition Height="60"/>
-                                <RowDefinition Height="60"/>
-                                <RowDefinition Height="50"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="200"/>
-                                <ColumnDefinition Width="125"/>
-                                <ColumnDefinition Width="125"/>
-                                <ColumnDefinition Width="100"/>
-                                <ColumnDefinition Width="200"/>
-                            </Grid.ColumnDefinitions>
-                            <Label Text="{Binding Ref}"
+    <ScrollView>
+        <VerticalStackLayout>
+            <ListView x:Name="ListMoto" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="60"/>
+                                    <RowDefinition Height="60"/>
+                                    <RowDefinition Height="60"/>
+                                    <RowDefinition Height="50"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="200"/>
+                                    <ColumnDefinition Width="125"/>
+                                    <ColumnDefinition Width="125"/>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="200"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding Ref}"
                                    Grid.Column="0"
                                    Grid.Row="0"
                                    Grid.ColumnSpan="2"
@@ -31,7 +32,7 @@
                                    VerticalOptions="Start"
                                    TextColor="White"
                                    FontSize="30"/>
-                            <Label Text="{Binding Marque}"
+                                <Label Text="{Binding Marque}"
                                    Grid.Column="0"
                                    Grid.Row="1"
                                    FontAttributes="Italic"
@@ -39,7 +40,7 @@
                                    VerticalOptions="Center"
                                    TextColor="White"
                                    FontSize="20"/>
-                            <Label Text="{Binding Modele}"
+                                <Label Text="{Binding Modele}"
                                    Grid.Column="0"
                                    Grid.Row="2"
                                    FontAttributes="Italic"
@@ -47,7 +48,7 @@
                                    VerticalOptions="Center"
                                    TextColor="White"
                                    FontSize="20"/>
-                            <Label Text="{Binding Annee}"
+                                <Label Text="{Binding Annee}"
                                       Grid.Column="1"
                                       Grid.Row="1"
                                       HorizontalOptions="Center"
@@ -55,7 +56,7 @@
                                       TextColor="White"
                                    FontSize="20"
                                    FontAttributes="Italic"/>
-                            <Label Text="{Binding CV}"
+                                <Label Text="{Binding CV}"
                                       Grid.Column="1"
                                       Grid.Row="2"
                                       HorizontalOptions="Center"
@@ -63,7 +64,7 @@
                                       TextColor="White"
                                    FontSize="20"
                                    FontAttributes="Italic"/>
-                            <Label Text="{Binding KW}"
+                                <Label Text="{Binding KW}"
                                       Grid.Column="1"
                                       Grid.Row="3"
                                       HorizontalOptions="Center"
@@ -71,7 +72,7 @@
                                       TextColor="White"
                                    FontSize="20"
                                    FontAttributes="Italic"/>
-                            <Label Text="{Binding Poids}"
+                                <Label Text="{Binding Poids}"
                                       Grid.Column="2"
                                       Grid.Row="1"
                                       HorizontalOptions="Center"
@@ -79,7 +80,7 @@
                                       TextColor="White"
                                    FontSize="20"
                                    FontAttributes="Italic"/>
-                            <Label Text="{Binding Prix  }"
+                                <Label Text="{Binding Prix  }"
                                       Grid.Column="2"
                                       Grid.Row="2"
                                       HorizontalOptions="Center"
@@ -87,7 +88,7 @@
                                       TextColor="White"
                                    FontSize="20"
                                    FontAttributes="Italic"/>
-                            <!--<Button x:Name="DeleteBTN"
+                                <!--<Button x:Name="DeleteBTN"
                                     Text="Supprimer" CommandParameter="{Binding ID}"
                                     Clicked="DeleteBTN_Clicked"
                                     Grid.Column="2"
@@ -95,7 +96,7 @@
                                     HorizontalOptions="End"
                                     WidthRequest="100"
                                     HeightRequest="20"/>-->
-                            <ImageButton x:Name="DeleteBTN"
+                                <ImageButton x:Name="DeleteBTN"
                                          Source="logo_suppr.png"
                                     CommandParameter="{Binding ID}"
                                     Clicked="DeleteBTN_Clicked"
@@ -106,7 +107,7 @@
                                     HeightRequest="20"/>
 
 
-                            <!--<Button x:Name="ModifBTN"
+                                <!--<Button x:Name="ModifBTN"
                                     Text="Modifier" CommandParameter="{Binding ID}"
                                     Clicked="ModifBTN_Clicked"
                                     Grid.Column="0"
@@ -114,7 +115,7 @@
                                     HorizontalOptions="Start"
                                     WidthRequest="100"
                                     HeightRequest="20"/>-->
-                            <ImageButton
+                                <ImageButton
                                 x:Name="ModifBTN"
                                 Source="logo_modif.png"
                                 CommandParameter="{Binding ID}"
@@ -126,49 +127,49 @@
                                     HeightRequest="20"/>
 
 
-                            <Label
+                                <Label
                                 Text="Marque :"
                                 Grid.Column="0"
                                 Grid.Row="1"
                                 FontAttributes="Bold"
                                 HorizontalOptions="Start"/>
-                            <Label
+                                <Label
                                 Text="Modele :"
                                 Grid.Column="0"
                                 Grid.Row="2"
                                 FontAttributes="Bold"
                                 HorizontalOptions="Start"/>
-                            <Label
+                                <Label
                                 Text="Annee :"
                                 Grid.Column="1"
                                 Grid.Row="1"
                                 FontAttributes="Bold"
                                 HorizontalOptions="Start"/>
-                            <Label
+                                <Label
                                 Text="CV :"
                                 Grid.Column="1"
                                 Grid.Row="2"
                                 FontAttributes="Bold"
                                 HorizontalOptions="Start"/>
-                            <Label
+                                <Label
                                 Text="KW :"
                                 Grid.Column="1"
                                 Grid.Row="3"
                                 FontAttributes="Bold"
                                 HorizontalOptions="Start"/>
-                            <Label
+                                <Label
                                 Text="Poids :"
                                 Grid.Column="2"
                                 Grid.Row="1"
                                 FontAttributes="Bold"
                                 HorizontalOptions="Start"/>
-                            <Label
+                                <Label
                                 Text="Prix :"
                                 Grid.Column="2"
                                 Grid.Row="2"
                                 FontAttributes="Bold"
                                 HorizontalOptions="Start"/>
-                            <!--<Button x:Name="Btn_Sound"
+                                <!--<Button x:Name="Btn_Sound"
                                     Text="Sound"
                                     Clicked="Btn_Sound_Clicked"
                                     WidthRequest="100"
@@ -176,7 +177,7 @@
                                     Grid.Row="2"
                                     Grid.Column="4"
                                     HorizontalOptions="Start"/>-->
-                            <ImageButton
+                                <ImageButton
                                 x:Name="Btn_Play"
                                 Source="logo_play.png"
                                     Clicked="Btn_Play_Clicked"
@@ -186,7 +187,7 @@
                                     Grid.Row="2"
                                     Grid.Column="4"
                                     HorizontalOptions="Start"/>
-                            <Label
+                                <Label
                                 Text="SON"
                                 Grid.Column="4"
                                 Grid.Row="1"
@@ -199,10 +200,11 @@
                                 FontSize="25"
                                 HeightRequest="35"
                                 WidthRequest="100"/>
-                        </Grid>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </VerticalStackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

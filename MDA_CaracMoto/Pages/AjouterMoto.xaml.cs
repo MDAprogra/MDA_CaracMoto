@@ -1,5 +1,7 @@
+using CommunityToolkit.Maui.Storage;
 using MDA_CaracMoto.Facto;
 using System.Security;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace MDA_CaracMoto.Pages;
@@ -7,9 +9,8 @@ namespace MDA_CaracMoto.Pages;
 public partial class AjouterMoto : ContentPage
 {
     public string Extension { get; set; }
-    public string AudioMoto { get; set; }
 
-    private readonly IDataService _dataService;
+    IDataService _dataService;
     public AjouterMoto()
     {
         InitializeComponent();
@@ -38,8 +39,7 @@ public partial class AjouterMoto : ContentPage
             KW = Convert.ToInt32(KW.Text),
             Poids = Convert.ToInt32(Poids.Text),
             Img = Image.Text.Trim() + Extension,
-            //Audio = Audio.Text.Trim()
-            Audio = AudioMoto
+            Audio = Audio.Text.Trim()
         };
         _dataService.AddMoto(moto);
         await DisplayAlert("Ajout", "Moto ajoutée", "OK");
@@ -55,28 +55,5 @@ public partial class AjouterMoto : ContentPage
         ChoixExt.SelectedItem = null;
         Image.Text = "";
         Audio.Text = "";
-    }
-
-    private async void AjoutAudio_Clicked(object sender, EventArgs e)
-    {
-        var motosound = await FilePicker.PickAsync(new PickOptions
-        {
-            //PickerTitle = "Sélectionner un fichier audio",
-            //FileTypes = FilePickerFileType.Videos
-            PickerTitle = "Sélectionner un fichier audio",
-            FileTypes = new FilePickerFileType(new Dictionary<DevicePlatform, IEnumerable<string>>
-            {
-                { DevicePlatform.WinUI, new[] { ".mp3", ".wav" } }
-            })
-        });
-        AudioMoto = motosound.FileName;
-        if (AudioMoto == null)
-            return;
-        else
-        {
-            AjoutAudio.Text = AudioMoto;
-            //Ajout de l'audio dans le fichier Raw
-
-        }
     }
 }
