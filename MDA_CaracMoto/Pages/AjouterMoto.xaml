@@ -137,6 +137,10 @@
                 WidthRequest="500"
                 HorizontalOptions="Center"
                 Placeholder="Nom de l'audio (avec l'extension)"/>
+            <Button
+                x:Name="AjoutAudio"
+                Text="Choisir un audio"
+                Clicked="AjoutAudio_Clicked"/>
             <Image x:Name="Fabio"
                    Margin="10"
                      Grid.Row="0"
