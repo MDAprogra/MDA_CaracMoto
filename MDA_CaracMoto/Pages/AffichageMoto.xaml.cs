@@ -7,8 +7,7 @@ namespace MDA_CaracMoto.Pages;
 public partial class AffichageMoto : ContentPage
 {
 	public readonly IDataService _dataService;
-    private readonly IAudioManager audioManager;
-
+    private IAudioManager audioManager;
 
     public AffichageMoto(IAudioManager audioManager)
 	{
@@ -50,5 +49,5 @@ public partial class AffichageMoto : ContentPage
         {
             await DisplayAlert("Erreur", "L'audio n'existe pas", "Continuer");
         }
-    }    
+    }
 }
