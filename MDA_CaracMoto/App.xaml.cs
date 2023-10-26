@@ -1,4 +1,7 @@
-﻿namespace MDA_CaracMoto
+﻿using MDA_CaracMoto.Pages;
+using Plugin.Maui.Audio;
+
+namespace MDA_CaracMoto
 {
     //public partial class App : Application
     //{
@@ -20,13 +23,12 @@
         }
 
         protected override Window CreateWindow(IActivationState activationState) =>
-            new Window(new AppShell())
+            new(new AppShell())
             {
                 Width = 1920,  // Remplacez 1920 par la largeur de votre écran
                 Height = 1080, // Remplacez 1080 par la hauteur de votre écran
                 X = 0,         // Position X de la fenêtre (0 pour le coin supérieur gauche de l'écran)
-                Y = 0
-
+                Y = 0         // Position Y de la fenêtre (0 pour le coin supérieur gauche de l'écran)
             };   
     }
 }

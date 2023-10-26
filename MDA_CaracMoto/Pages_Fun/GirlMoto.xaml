@@ -6,43 +6,43 @@
              BackgroundColor="HotPink"
              Shell.BackgroundColor="DeepPink">
     <ScrollView>
-        <VerticalStackLayout>
-            <Label 
+            <VerticalStackLayout>
+                <Label 
             Text="Coucou toi!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-            <Grid Padding="10,5">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Image
+                <Grid Padding="10,5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image
                 x:Name="Img1"
                 Source="img_fille1.jpg"
                 Grid.Column="0"
                 Grid.Row="0"
                 HeightRequest="500"
                 />
-                <Image
+                    <Image
                 x:Name="Img2"
                 Source="img_fille2.jpg"
                 Grid.Column="1"
                 Grid.Row="0"
                 HeightRequest="500"
                 />
-                <Image
+                    <Image
                 x:Name="Img3"
                 Source="img_fille3.jpg"
                 Grid.Column="2"
                 Grid.Row="0"
                 HeightRequest="500"
                 />
-            </Grid>
-        </VerticalStackLayout>
-    </ScrollView>
+                </Grid>
+            </VerticalStackLayout>
+        </ScrollView>
 </ContentPage>

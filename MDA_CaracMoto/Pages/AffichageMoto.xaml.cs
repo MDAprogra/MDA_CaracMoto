@@ -40,23 +40,15 @@ public partial class AffichageMoto : ContentPage
     }
     public async void Btn_Play_Clicked(object sender, EventArgs e)
     {
-        //var NomAudio = (string)(sender as ImageButton).CommandParameter;
-        //var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync(NomAudio));
         var NomAudio = (string)(sender as ImageButton).CommandParameter;
-
-        //var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("sound_sv650.mp3"));
         try
         {
-            //var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("sound_sv650.mp3"));
-
-            //var NomAudio = (string)(sender as ImageButton).CommandParameter;
             var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync(NomAudio));
             player.Play();
-
         }
         catch (Exception)
         {
-            await DisplayAlert("Erreur", "Audio Introuvable. Veuillez vérifier le nom de l'audio.", "OK");
+            await DisplayAlert("Erreur", "L'audio n'existe pas", "Continuer");
         }
     }    
 }
