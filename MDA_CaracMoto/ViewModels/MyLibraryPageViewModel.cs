@@ -10,7 +10,6 @@ namespace MDA_CaracMoto.ViewModels
     public class MyLibraryPageViewModel : BaseViewModel
     {
         MusicItemViewModel selectedMusicItem;
-        public Command AddRecordingCommand { get; }
         public ObservableCollection<MusicItemViewModel> Music { get; }
 
 
@@ -20,8 +19,6 @@ namespace MDA_CaracMoto.ViewModels
         {
             new MusicItemViewModel("The Happy Ukelele Song", "Stanislav Fomin", "ukelele.mp3")
         };
-
-            AddRecordingCommand = new Command(AddRecording);
         }
 
         public MusicItemViewModel SelectedMusicItem
@@ -34,11 +31,6 @@ namespace MDA_CaracMoto.ViewModels
 
                 OnMusicItemSelected();
             }
-        }
-
-        async void AddRecording()
-        {
-            await Shell.Current.GoToAsync(Routes.AudioRecorder.RouteName);
         }
 
         async void OnMusicItemSelected()
