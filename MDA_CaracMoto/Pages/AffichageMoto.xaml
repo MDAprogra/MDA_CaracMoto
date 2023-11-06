@@ -201,11 +201,6 @@
                                     Grid.Row="2"
                                     Grid.Column="4"
                                     HorizontalOptions="Start"/>
-                                <ImageButton
-                                    x:Name="Btn_Pause"
-                                    Source="logo_pause.png"
-                                    Clicked="Btn_Pause_Clicked"
-                                    />
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
